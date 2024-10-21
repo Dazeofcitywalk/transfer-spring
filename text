@@ -1,0 +1,26 @@
+Project Creation and Configuration:
+Created the Spring Boot project using Spring Initializer.
+Configured dependencies in the pom.xml file (such as Spring Security, JWT, Spring Data JPA, etc.).
+Entity Classes:
+Employee Entity: Stores employee information (e.g., name, position).
+User Entity: Stores user information for login authentication (e.g., username, password).
+Repository:
+Created corresponding Repository for Employee and User to handle database operations and data persistence.
+Controller:
+Employee Controller: Handles CRUD operations for employee data (GET, POST, PUT, DELETE).
+Auth Controller: Manages user authentication and returns a JWT token upon login.
+JWT Authentication & Authorization Implementation:
+Custom User Details Service:
+
+Implements the logic to verify the username and password.
+Integrates this verification logic into Spring Security using the Authentication Manager.
+JWT Util:
+
+A utility class for handling JWT token and claims, including functions for generating, parsing, and validating tokens.
+JWT Filter:
+
+Uses JWT Util to validate the JWT token present in requests.
+Intercepts requests and ensures token validity for secure access control.
+Security Configuration:
+
+Adds the JWT Filter to the Spring Security configuration, ensuring that token validation occurs before user authentication.
